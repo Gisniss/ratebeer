@@ -13,7 +13,7 @@
 
 <p>
   <strong>Brewery:</strong>
-  <%= @beer.panimo %>
+  <%= @beer.brewery_id %>
 </p>
 
 
