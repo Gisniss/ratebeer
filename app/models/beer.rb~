@@ -12,7 +12,7 @@ class Beer < ActiveRecord::Base
   end
 
   def panimo
-	a = Beer.brewery_id
+	a = self.brewery_id
 	b = Brewery.find_by id:a
 	"#{b.name}"
   end
