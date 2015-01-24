@@ -3,7 +3,7 @@ class RatingsController < ApplicationController
 	@ratings = Rating.all
   end
   def new
-	@rating = Rating.new
+	@ratings = Rating.new
 	@beers = Beer.all
   end
   def create

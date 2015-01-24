@@ -7,7 +7,7 @@ class RatingsController < ApplicationController
 	@beers = Beer.all
   end
   def create
-	Ratind.create params.require(:rating).permit(:score, :beer_id)
+	Rating.create params.require(:rating).permit(:score, :beer_id)
 	redirect_to ratings_path
   end
 
