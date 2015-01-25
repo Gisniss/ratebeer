@@ -1,5 +1,6 @@
 class Brewery < ActiveRecord::Base
-	has_many :beers
+	has_many :beers, dependent: :destroy
+	has_many :ratings, through: :beers
 
   def print_report
 	puts name
@@ -12,6 +13,9 @@ class Brewery < ActiveRecord::Base
 	puts "changed year to #{year}"
   end
 
-  
+  def average_rating
+	sana = "rating"
+	"Has #{ratings.count} #{sana.pluralize(ratings.count)}, average #{ratings.average(:score)}"
+  end
 
 end
