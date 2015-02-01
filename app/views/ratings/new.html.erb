@@ -1,6 +1,6 @@
 <h2>Create new rating</h2>
 
-<%= form_for(@ratings) do |f| %>
+<%= form_for(@rating) do |f| %>
 <% if @rating.errors.any? %>
   <div id="error_explanation">
    <h2><%= pruralize(@rating.errors.count, "error") %> prohibited rating from being saved:</h2>
